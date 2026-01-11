@@ -29,7 +29,6 @@ section[class*="panels"]:has(div[class*="container"] > div[class*="buttons"] > d
 nav[class*="guilds"] {
     width: 72px;
     margin-left: -62px;
-    height: 86%;
     opacity: 0.2;
     z-index: 10;
     transition: margin-left 0.3s ease-out 0.3s, opacity 0.3s 0.3s;
