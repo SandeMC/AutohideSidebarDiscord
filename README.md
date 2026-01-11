@@ -5,3 +5,6 @@ Simple CSS to autohide the sidebar and expand it on hover - targetting OLED long
 
 https://github.com/user-attachments/assets/b53d5afb-6c8f-481f-aedf-d4f7857f9b47
 
+## Installation
+
+Either download and drop autohideSidebar.theme.css file into your custom client's themes folder manually, or download it via this link if your client supports that: `https://raw.githubusercontent.com/SandeMC/AutohideSidebarDiscord/refs/heads/main/autohideSidebar.theme.css` 
