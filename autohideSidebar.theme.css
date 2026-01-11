@@ -5,8 +5,10 @@
 * @source https://github.com/SandeMC/AutohideSidebarDiscord
 * @updateUrl https://raw.githubusercontent.com/SandeMC/AutohideSidebarDiscord/main/autohideSidebar.theme.css
 * @authorId 248163371919081472
-* @version 1.0.0
+* @version 1.1.0
 */
+
+/* hovering mouse to the left of the profile fly-out is glitchy, i know that but i don't think there's any easy way to fix that without code */
 
 /* set collapsed state for channel list */
 div[class*="sidebarList"] {
@@ -17,7 +19,7 @@ div[class*="sidebarList"] {
 }
 
 /* set the user flyout*/
-section[class*="panels"]:has(div[class*="buttons"] > div[class*="micButton"]) {
+section[class*="panels"]:has(div[class*="container"] > div[class*="buttons"] > div[class*="micButton"]) {
     opacity: 0; 
     pointer-events: none;
     transition: opacity 0.3s ease-out 0.3s;
@@ -27,6 +29,7 @@ section[class*="panels"]:has(div[class*="buttons"] > div[class*="micButton"]) {
 nav[class*="guilds"] {
     width: 72px;
     margin-left: -62px;
+    height: 86%;
     opacity: 0.2;
     z-index: 10;
     transition: margin-left 0.3s ease-out 0.3s, opacity 0.3s 0.3s;
@@ -72,6 +75,12 @@ div[class*="tooltip"]:has(> div[class*="tooltipContent"] > div[class*="listItemT
   pointer-events: none !important;
 }
 
+div[class*="sidebarResizeHandle"] {
+  display: none !important;
+  pointer-events: none !important;
+
+}
+
 /* expand and persist logic
 
 /* you can also add:
@@ -85,7 +94,7 @@ to support context menus, but elements will expand with other context menus aswe
 body:has(
     nav[class*="guilds"]:hover,
     div[class*="sidebarList"]:hover,
-    section[class*="panels"] > div[class*="container"]:hover,
+    section[class*="panels"]:hover,
     div[id*="popout"] > div[class*="animatorTop"] > div[class*="popoutContainer"] > div[class*="user-profile-popout"]
 )
 :is(div[class*="sidebarList"], section[class*="panels"]:has(div[class*="container"] > div[class*="buttons"] > div[class*="micButton"])) {
